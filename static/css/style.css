@@ -1,0 +1,269 @@
+:root {
+    --pastel-red: #ff6961;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --header-bg-color: #fff;
+    --header-text-color: #333;
+    --footer-bg-color: #fff;
+    --footer-text-color: #333;
+    --overlay-bg-color: rgba(0, 0, 0, 0.5);
+    --overlay-text-color: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    scroll-behavior: smooth;
+    padding-bottom: 60px; /* Add padding to the bottom to prevent footer overlap */
+}
+
+header {
+    width: 100%;
+    background-color: var(--header-bg-color);
+    padding: 5px 0; /* Reduce padding to make the header smaller */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font to header */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin: 0 10px; /* Reduce margin to make the header smaller */
+}
+
+nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-size: 14px; /* Reduce font size to make the header smaller */
+    padding: 5px 10px;
+    font-weight: 700; /* Make the text bold */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 1px; /* Add letter spacing */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--pastel-red);
+    color: var(--overlay-text-color);
+    border-radius: 5px;
+}
+
+nav ul li.logo {
+    margin: 0 20px; /* Reduce margin to make the header smaller */
+}
+
+nav ul li.logo img {
+    height: 40px; /* Reduce the size of the logo */
+    border-radius: 0; /* Remove rounded corners */
+    background-color: transparent; /* Remove background color */
+    padding: 0; /* Remove padding */
+}
+
+.cover-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px; /* Adjust for fixed header */
+}
+
+.cover-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.cover-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--overlay-text-color);
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 80px; /* Add margin to push content below the fixed header */
+}
+
+h1, h2 {
+    color: var(--pastel-red);
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+ul li:hover {
+    transform: translateY(-5px);
+}
+
+.video-container {
+    border: 2px solid var(--pastel-red);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#detected-foods {
+    margin-top: 20px;
+}
+
+#food-list {
+    list-style: none;
+    padding: 0;
+}
+
+#food-list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 5px 0; /* Reduce padding to make the footer smaller */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for warehouse items */
+#warehouse-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create a responsive grid */
+    gap: 10px; /* Space between items */
+    width: 100%;
+}
+
+/* Individual warehouse item */
+.warehouse-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Control button styles */
+.control-button {
+    background-color: #ff6961;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-button:hover {
+    background-color: #ff5c5c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.control-button:active {
+    background-color: #ff4c4c;
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply fadeIn animation to elements with the class 'fade-in' */
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}

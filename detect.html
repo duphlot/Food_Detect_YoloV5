@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv5 Food Detection - Detect</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/detect">Detect</a></li>
+                <li class="logo">
+                    <img src="/static/images/logo.png" alt="Logo">
+                </li>
+                <li><a href="/warehouse">Warehouse</a></li>
+                <li><a href="/recipes">Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="cover-image">
+        <img src="/static/images/cover.jpg" alt="Cover Image">
+        <div class="overlay">
+            <h1>Welcome to YOLOv5 Food Detection</h1>
+            <p>Detect and manage your food items with ease</p>
+        </div>
+    </div>
+    <section id="detect">
+        <h2>YOLOv5 Camera Feed</h2>
+        <div class="video-container">
+            <img id="video" src="/video_feed" width="640" height="480">
+        </div>
+        <div id="controls">
+            <button id="start-recording" class="control-button">Start Recording</button>
+            <button id="stop-recording" class="control-button">Stop Recording</button>
+            <button id="download-video" class="control-button" style="display: none;">Download Video</button>
+        </div>
+        <div id="detected-foods">
+            <h2>Detected Foods</h2>
+            <ul id="food-list"></ul>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+    <script src="/static/js/detect.js"></script>
+</body>
+</html>
